@@ -23,9 +23,69 @@ body {
 }
 
 .header-wrapper {
-  background-image: linear-gradient(to right, #7ed56fd2, #28b485d3) , url(../img/hero.jpg);
+  background-image: linear-gradient(to bottom, #7ed56fd2, #28b485d3) , url(../img/hero.jpg);
   background-size: cover;
   height: 95vh;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}
+
+.logo-container img {
+  height: 35px;
+}
+
+.heading{
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+} 
+
+.heading-primary {
+  color: white;
+}
+
+.heading-primary-main {
+  display: block;
+  letter-spacing: 38px;
+  font-weight: 400;
+  font-size: 60px;
+  animation: moveInLeft 0.8s ease-out;
+}
+.heading-primary-secondary {
+  display: block;
+  letter-spacing: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  animation: moveInRight 0.8s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
